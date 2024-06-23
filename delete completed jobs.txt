@@ -1,0 +1,7 @@
+https://access.redhat.com/solutions/5266521
+
+# oc delete pod --field-selector=status.phase==Succeeded --all-namespaces
+# oc delete pod --field-selector=status.phase==Succeeded,spec.host=<node-name> --all-namespaces
+# oc get pods --field-selector=status.phase==Succeeded --all-namespaces
+# oc delete pods --field-selector=status.phase=Failed --all-namespaces
+# oc delete pod --field-selector=status.phase=Running -n switching-qa

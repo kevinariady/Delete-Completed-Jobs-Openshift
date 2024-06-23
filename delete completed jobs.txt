@@ -1,7 +1,14 @@
-https://access.redhat.com/solutions/5266521
-
+Below command to delete pods in all namespace with succeeded status
 # oc delete pod --field-selector=status.phase==Succeeded --all-namespaces
+
+Below command to delete pods in all namespace with succeeded status in a specific node name
 # oc delete pod --field-selector=status.phase==Succeeded,spec.host=<node-name> --all-namespaces
+
+Below command to list pods in all namespace with succeeded status
 # oc get pods --field-selector=status.phase==Succeeded --all-namespaces
+
+Below command to delete pods in all namespace with failed status
 # oc delete pods --field-selector=status.phase=Failed --all-namespaces
-# oc delete pod --field-selector=status.phase=Running -n switching-qa
+
+Below command to restart all running pods in 1 namespace
+# oc delete pod --field-selector=status.phase=Running -n namespace
